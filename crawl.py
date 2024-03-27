@@ -47,7 +47,7 @@ def crawl_latest_update(url):
     driver.get(url)
     driver.implicitly_wait(5)
     print(f"Getting the last modified date of code: {url}")
-    elem = driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/main/turbo-frame/div/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div/div[2]/div[1]/span[1]/relative-time')
+    elem = driver.find_element(By.XPATH, '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div/div[2]/span[1]/relative-time')
     time_text = elem.text
     assert "No results found." not in driver.page_source
     driver.close()
