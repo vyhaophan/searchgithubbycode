@@ -80,7 +80,7 @@ def main():
     # input for the password
 
     # search_query = st.text_input("Enter a search query for code")
-    YOUR_GITHUB_TOKEN = "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"
+    YOUR_GITHUB_TOKEN = st.secrets["YOUR_GITHUB_TOKEN"]
     queries_per_page = st.slider('Number of search results:', 0, 100, 5)
     sort = st.checkbox('Sort descendingly', value=True)
 
